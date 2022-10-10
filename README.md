@@ -17,3 +17,6 @@ Controls:
 W, A, S, D (up, down, left, right) = movement
 Mouse = camera
 Spacebar = jump
+
+Project Structure:
+![image](https://user-images.githubusercontent.com/27406716/194954270-f0458ea9-511e-4771-9d66-738ad7b450ef.png)
