@@ -14,6 +14,11 @@ config/name="Untitled FPS"
 run/main_scene="res://maps/test_map.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Network="*res://network.gd"
+Global="*res://global.gd"
+
 [display]
 
 window/size/width=1920

@@ -20,6 +20,10 @@ height = 2.5
 collision_layer = 2
 collision_mask = 3
 script = ExtResource( 2 )
+model = NodePath("Body")
+camera = NodePath("Head/Camera")
+network_tick_rate = NodePath("NetworkTickRate")
+movement_tween = NodePath("MovementTween")
 
 [node name="Body" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.25, 0 )
@@ -38,3 +42,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.25, -1.25 )
 
 [node name="Camera" type="Camera" parent="Head"]
 current = true
+
+[node name="NetworkTickRate" type="Timer" parent="."]
+wait_time = 0.03
+autostart = true
+
+[node name="MovementTween" type="Tween" parent="."]
+
+[connection signal="timeout" from="NetworkTickRate" to="." method="_on_NetworkTickRate_timeout"]
